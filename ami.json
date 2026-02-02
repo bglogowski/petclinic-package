@@ -13,7 +13,7 @@
         "region" : "{{user `region`}}",
         "instance_type" : "t2.micro",
         "source_ami" : "{{user `source_ami`}}",
-        "ssh_username" : "ec2-user",
+        "ssh_username" : "ubuntu",
         "ami_name" : "{{user `artifactId`}}-{{user `jenkinsBuildId`}}",
         "ami_description" : "PetClinic Amazon Ubuntu Image",
         "run_tags" : {
