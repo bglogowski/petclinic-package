@@ -1,6 +1,6 @@
 #!/bin/sh 
 SERVICE_NAME=petclinic
-PATH_TO_JAR=/home/ubuntu/spring-petclinic-2.1.0.BUILD-SNAPSHOT.jar
+PATH_TO_JAR=/var/lib/tomcat9/webapps/spring-petclinic-2.1.19.BUILD-SNAPSHOT.jar
 PID_PATH_NAME=/tmp/petclinic-pid 
 case $1 in 
 start)
