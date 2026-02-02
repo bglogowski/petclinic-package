@@ -28,7 +28,7 @@ pipeline  {
         echo "Getting Packer Repo"
         git(
         url:'git@github.com:bglogowski/petclinic-package.git',
-        credentialsId: 'package',
+        credentialsId: 'jenkins',
         branch: "main"
         )
      }
