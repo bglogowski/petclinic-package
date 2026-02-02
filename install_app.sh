@@ -3,13 +3,13 @@
 defaultBuildId=spring-petclinic-2.1.0.BUILD-SNAPSHOT.jar
 buildId=${1:-$defaultBuildId}
 
-echo "update outdates packages and wait 30 seconds";
-sudo apt-get update
-sleep 30s
+#echo "update outdates packages and wait 30 seconds";
+#sudo apt-get update
+#sleep 30s
 
-echo "install java and wait 30 seconds";
-sudo apt install -y openjdk-11-jre-headless
-sleep 30s
+#echo "install java and wait 30 seconds";
+#sudo apt install -y openjdk-11-jre-headless
+#sleep 30s
 
 echo "Verifying java was installed";
 java --version
@@ -23,7 +23,7 @@ echo "This is the COPY COMMAND:";
 echo "cp \"$buildId\" /var/lib/tomcat9/webapps/"
 cp $buildId /home/ubuntu
 echo "Change ownership so it can be started by the process"
-sudo chown ubuntu:ubuntu spring-petclinic-2.1.0.BUILD-SNAPSHOT.jar
+sudo chown ubuntu:ubuntu $defaultBuildId
 
 echo "installing petclinic services to run petclinic as service so it starts automatically"
 sudo cp petclinic.sh /usr/local/bin/
