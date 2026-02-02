@@ -83,10 +83,10 @@ pipeline  {
              echo "This is varJenkinsBuildId $varBuildId";
              echo "This is varArtifactId $varArtifactId";
  
-             sh "/usr/local/bin/packer validate -var $varBuildId -var $varJenkinsBuildId -var $varArtifactId ./ami.json"
+             sh "/usr/bin/packer validate -var $varBuildId -var $varJenkinsBuildId -var $varArtifactId ./ami.json"
 
              echo "Starting --- packer build"
-             sh "/usr/local/bin/packer build -var $varBuildId -var $varJenkinsBuildId -var $varArtifactId ./ami.json"
+             sh "/usr/bin/packer build -var $varBuildId -var $varJenkinsBuildId -var $varArtifactId ./ami.json"
 
         }
       }
