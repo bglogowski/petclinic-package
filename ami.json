@@ -1,7 +1,7 @@
 { 
   "variables" : {
-      "region" : "us-west-1",
-      "source_ami" : "ami-099592454c308b00f",
+      "region" : "us-west-2",
+      "source_ami" : "ami-082fef30815579cee",
       "buildId" : "",
       "jenkinsBuildId" : "",
       "artifactId" : ""
@@ -13,7 +13,7 @@
         "region" : "{{user `region`}}",
         "instance_type" : "t2.micro",
         "source_ami" : "{{user `source_ami`}}",
-        "ssh_username" : "ubuntu",
+        "ssh_username" : "ec2-user",
         "ami_name" : "{{user `artifactId`}}-{{user `jenkinsBuildId`}}",
         "ami_description" : "PetClinic Amazon Ubuntu Image",
         "run_tags" : {
@@ -23,7 +23,7 @@
             "Tool" : "Packer",
             "Name" : "{{user `artifactId`}}-{{user `jenkinsBuildId`}}",
             "build_id" : "{{user `artifactId`}}-{{user `jenkinsBuildId`}}",
-            "Author" : "ochoa"
+            "Author" : "bglogowski"
         }
       }
   ],
