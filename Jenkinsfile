@@ -13,7 +13,7 @@ pipeline  {
     this_jenkins_build_id= ""
     props = "";
     FilePropertiesLocation = "";
-    ProjectName = "spring-petclinic";
+    ProjectName = "petclinic-spring";
     fileProperties = "file.properties"
 
   }
