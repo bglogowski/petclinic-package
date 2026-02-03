@@ -34,7 +34,7 @@ pipeline  {
         )
 
         script {
-               slackSend channel: '#jenkins', message: "${env.JOB_NAME} build #${env.BUILD_NUMBER} stage: Getting Packer Repo"
+               slackSend channel: '#jenkins', message: "${env.JOB_NAME} build #${env.BUILD_NUMBER} stage: Get Packer Repo"
         }
 
      }
@@ -44,6 +44,8 @@ pipeline  {
    stage('Read Properties File') {
       steps {
         script {
+           slackSend channel: '#jenkins', message: "${env.JOB_NAME} build #${env.BUILD_NUMBER} stage: Read Properties File"
+          
            copyArtifacts(projectName: "${ProjectName}");
            props = readProperties file:"${fileProperties}";
 
@@ -75,6 +77,7 @@ pipeline  {
    
         script {
              // The build location is going to be on the target directory, so add the target path
+             slackSend channel: '#jenkins', message: "${env.JOB_NAME} build #${env.BUILD_NUMBER} stage: Create app image"
           
              def varBuildId = "buildId=" + "$this_full_build_id";
              def varJenkinsBuildId = "jenkinsBuildId=" + "$this_jenkins_build_id";
