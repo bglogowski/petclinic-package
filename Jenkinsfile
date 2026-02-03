@@ -26,11 +26,17 @@ pipeline  {
    { 
       steps {
         echo "Getting Packer Repo"
+        
         git(
         url:'git@github.com:bglogowski/petclinic-package.git',
         credentialsId: 'jenkins',
         branch: "main"
         )
+
+        script {
+               slackSend channel: '#jenkins', message: "${env.JOB_NAME} build #${env.BUILD_NUMBER} stage: Getting Packer Repo"
+        }
+
      }
 
    }
