@@ -22,8 +22,11 @@ ls -l
 echo "This is the COPY COMMAND:";
 echo "cp \"$buildId\" /var/lib/tomcat9/webapps/"
 cp $buildId /home/ubuntu
+cp $buildId /var/lib/tomcat9/webapps/
+
 echo "Change ownership so it can be started by the process"
-sudo chown ubuntu:ubuntu $defaultBuildId
+sudo chown ubuntu:ubuntu /home/ubuntu/$defaultBuildId
+sudo chown ubuntu:ubuntu /var/lib/tomcat9/webapps/$defaultBuildId
 
 echo "installing petclinic services to run petclinic as service so it starts automatically"
 sudo cp petclinic.sh /usr/local/bin/
