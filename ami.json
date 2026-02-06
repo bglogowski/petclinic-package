@@ -1,7 +1,7 @@
 { 
   "variables" : {
       "region" : "us-west-2",
-      "source_ami" : "ami-0b3154b83c6239785",
+      "source_ami" : "ami-0e83437fed028dbde",
       "buildId" : "",
       "jenkinsBuildId" : "",
       "artifactId" : ""
