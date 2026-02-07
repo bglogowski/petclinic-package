@@ -1,6 +1,6 @@
 #!/bin/bash
 
-defaultBuildId=spring-petclinic-2.1.0.BUILD-SNAPSHOT.jar
+defaultBuildId=spring-petclinic-2.1.19.BUILD-SNAPSHOT.jar
 buildId=${1:-$defaultBuildId}
 
 #echo "update outdates packages and wait 30 seconds";
