@@ -22,6 +22,8 @@ ls -l
 echo "This is the COPY COMMAND:";
 echo "cp \"$buildId\" /var/lib/tomcat9/webapps/"
 cp $buildId /home/ubuntu
+mkdir -p /var/lib/tomcat9/webapps
+sudo chown ubuntu:ubuntu /var/lib/tomcat9/webapps
 cp $buildId /var/lib/tomcat9/webapps/
 
 echo "Change ownership so it can be started by the process"
@@ -37,6 +39,7 @@ sudo chmod 644 /etc/systemd/system/petclinic.service
 
 sudo systemctl daemon-reload
 sudo systemctl enable petclinic
+sudo systemctl start petclinic
 
 # Now, the service can be managed with these commands
 #sudo systemctl daemon-reload
